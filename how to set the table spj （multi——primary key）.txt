@@ -1,0 +1,11 @@
+create table SPJ
+(
+  SNO number(3) not null,
+  PNO number(3) not null,
+  JNO number(3) not null,
+  QTY VARCHAR(20),
+  constraint SPJPK primary key (SNO,PNO,JNO),
+  constraint SPJFK1 foreign key(SNO) references S (SNO),
+  constraint SPJFK2 foreign key(PNO) references P (PNO),
+  constraint SPJFK3 foreign key(JNO) references J (JNO)
+);
